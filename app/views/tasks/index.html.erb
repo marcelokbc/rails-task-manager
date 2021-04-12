@@ -1,10 +1,25 @@
-<h1>My Tasks</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <%= link_to "detalhes" , task %>
-      Title: <%= task.title %> -  Detail: <%= task.details %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="title">
+    <h1>All tasks</h1>
+  </div>
+
+  <div>
+    <ul>
+      <% @tasks.each do |task| %>
+        <li>
+          <% if task.completed == false %>
+            <input type="checkbox">
+          <% else %>
+            <input type="checkbox" checked>
+          <% end %>
+          <%= link_to task.title, task_path(task.id) %>
+        </li>
+      <% end %>
+
+    </ul>
+      <span>
+      <%= link_to "Add new task", new_task_path %>
+      </span>
+  </div>
+</div>
 

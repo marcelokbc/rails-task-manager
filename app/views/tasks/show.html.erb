@@ -1,5 +1,35 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<p><%= @task.completed %></p>
+<div class="container">
+  <h1><%= @task.title %></h1>
+
+  <p><%= @task.details %></p>
+
+  <% if @task.completed === false %>
+    <p>This task is not completed yet</p>
+  <% else %>
+    <p>Task is completed</p>
+  <% end %>
+
+
+  <br>
+
+  <div>
+    <span >
+      <%= link_to "Home", tasks_path %>
+    </span>
+    <span>
+      <%= link_to "Edit", edit_task_path %>
+    </span>
+    <span>
+      <%= link_to "Mark as Completed", edit_task_path %>
+    </span>
+    <span>
+    <%= link_to "Delete",
+        destroy_task_path(@task),
+        method: :delete,
+        data: { confirm: "Are you sure?"} %>
+    </span>
+  </div>
+
+</div>
 
 
