@@ -3,7 +3,7 @@
     <h1>All tasks</h1>
   </div>
 
-  <div>
+  <div class="checkbox">
     <ul>
       <% @tasks.each do |task| %>
         <li>
@@ -17,9 +17,11 @@
       <% end %>
 
     </ul>
+    <div class="btn btn-info m-3">
       <span>
       <%= link_to "Add new task", new_task_path %>
       </span>
+    </div>
   </div>
 </div>
 

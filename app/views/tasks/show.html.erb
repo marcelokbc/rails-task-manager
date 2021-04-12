@@ -1,34 +1,38 @@
-<div class="container">
-  <h1><%= @task.title %></h1>
+<div class="container ">
+  <div class="task-box">
+    <div class="title">
+    <h1><%= @task.title %></h1>
 
-  <p><%= @task.details %></p>
+    <p><%= @task.details %></p>
 
-  <% if @task.completed === false %>
-    <p>This task is not completed yet</p>
-  <% else %>
-    <p>Task is completed</p>
-  <% end %>
-
+    <% if @task.completed === false %>
+      <p>This task is not completed yet</p>
+    <% else %>
+      <p>Task is completed</p>
+    <% end %>
+  </div>
 
   <br>
 
-  <div>
-    <span >
-      <%= link_to "Home", tasks_path %>
-    </span>
-    <span>
-      <%= link_to "Edit", edit_task_path %>
-    </span>
-    <span>
-      <%= link_to "Mark as Completed", edit_task_path %>
-    </span>
-    <span>
-    <%= link_to "Delete",
-        destroy_task_path(@task),
-        method: :delete,
-        data: { confirm: "Are you sure?"} %>
-    </span>
+    <div class="buttons ml-3">
+      <span class="btn btn-info">
+        <%= link_to "Home", tasks_path %>
+      </span>
+      <span class="btn btn-info">
+        <%= link_to "Edit", edit_task_path %>
+      </span>
+      <span class="btn btn-info">
+        <%= link_to "Mark as Completed", edit_task_path %>
+      </span>
+      <span class="btn btn-info">
+      <%= link_to "Delete",
+          destroy_task_path(@task),
+          method: :delete,
+          data: { confirm: "Are you sure?"} %>
+      </span>
+    </div>
   </div>
+
 
 </div>
 

@@ -2,12 +2,35 @@
 
 body {
   font-family: "trebuchet MS", Helvetica, sans-serif;
-  background: #51c4d3;
+  background: #184d47;
 }
 
 ul {
   list-style-type: none;
 }
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 25px;
+}
+
+a {
+  color: #fff;
+  font-size: 20px;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+
 
 .container {
   width: 720px;
@@ -17,4 +40,18 @@ ul {
   margin: 0 auto;
   margin-top: 120px;
 }
+
+.title {
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
 
